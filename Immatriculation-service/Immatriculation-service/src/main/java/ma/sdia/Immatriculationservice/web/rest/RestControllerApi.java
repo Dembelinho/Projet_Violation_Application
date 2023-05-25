@@ -1,4 +1,4 @@
-package ma.sdia.Immatriculationservice.web;
+package ma.sdia.Immatriculationservice.web.rest;
 
 import lombok.AllArgsConstructor;
 import ma.sdia.Immatriculationservice.entities.Owner;
@@ -34,10 +34,10 @@ public class RestControllerApi {
     @PutMapping("/owners/update/{id}")
     public Owner updateOwner(@PathVariable long id, @RequestBody Owner owner){
         Owner owner1 = ownerRepository.findById(id).get();
-        owner1.setBirthDay(owner.getBirthDay());
-        owner1.setName(owner.getName());
-        owner1.setEmail(owner.getEmail());
-        owner1.setVehicles(owner.getVehicles());
+        if (owner.getBirthDay() != null)owner1.setBirthDay(owner.getBirthDay());
+        if (owner.getName() != null)owner1.setName(owner.getName());
+        if (owner.getEmail() != null)owner1.setEmail(owner.getEmail());
+        if (owner.getVehicles() != null)owner1.setVehicles(owner.getVehicles());
         return ownerRepository.save(owner1);
     }
 
@@ -68,14 +68,14 @@ public class RestControllerApi {
     public Vehicle updateVehicle(@PathVariable String id,@RequestBody Vehicle vehicle){
         Vehicle vehicle1 = vehicleRepository.findVehicleByRegNumb(id);
         vehicle1.setBrand(vehicle.getBrand());
-        vehicle1.setModel(vehicle.getModel());
+        {vehicle1.setModel(vehicle.getModel());}
         vehicle1.setOwner(vehicle.getOwner());
         vehicle1.setFiscalPower(vehicle.getFiscalPower());
         return vehicleRepository.save(vehicle1);
     }
     @DeleteMapping ("/vehicles/{id}")
-    public void deleteVehicle(@PathVariable String regNumber){
-        vehicleRepository.deleteById(regNumber);
+    public void deleteVehicle(@PathVariable String id){
+        vehicleRepository.deleteById(id);
     }
 
 }

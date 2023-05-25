@@ -12,7 +12,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@ToString
+@ToString(exclude = "vehicles", includeFieldNames = false)
 public class Owner {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
