@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Application_Backend.iml" filepath="$PROJECT_DIR$/.idea/Application_Backend.iml" />
       <module fileurl="file://$PROJECT_DIR$/Immatriculation-service/Immatriculation-service/Immatriculation-service.iml" filepath="$PROJECT_DIR$/Immatriculation-service/Immatriculation-service/Immatriculation-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/radar-service/radar-service.iml" filepath="$PROJECT_DIR$/radar-service/radar-service.iml" />
     </modules>
   </component>
 </project>

@@ -4,6 +4,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/Immatriculation-service/Immatriculation-service/pom.xml" />
+        <option value="$PROJECT_DIR$/radar-service/pom.xml" />
       </list>
     </option>
   </component>

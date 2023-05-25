@@ -15,7 +15,6 @@ import java.util.List;
 public class OwnerSoapController {
     private OwnerSoapService ownerSoapService;
 
-
     // Get all owners using soap
     @GetMapping("/owners")
     public List<Owner> getOwners() {
